@@ -3,7 +3,7 @@
 * [Install Jenkins](#install-jenkins)
 
 ### Install Jenkins
-Install Jenkins on the Cloud using docker (DigitalOcean).
+Install Jenkins on the Cloud using Docker (DigitalOcean).
 
 #### DigitalOcean
 Setup DigitalOcean droplet and ssh into the machine: 
