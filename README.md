@@ -55,13 +55,13 @@ Start the container:
 ````shell
 docker run -p 3000:3000 -d hakimixx/docker-nodejs-demo
 ````
-Navigate to 
+Navigate to the host IP
 ```shell
-# localhost
-http://localhost:3000
-
-# Host machine 
 http://<ip-address>:3000
+```
+Or use curl in the machine 
+```shell
+curl http://localhost:3000
 ```
 
 ### Build and deploy application
