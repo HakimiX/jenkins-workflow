@@ -83,3 +83,6 @@ system as in the non-production environments.
 * CloudBees Docker Build and Publish
 * Jenkins Job DSL
 
+
+### Jenkins Job DSL
+[API documentation](https://jenkinsci.github.io/job-dsl-plugin/)
