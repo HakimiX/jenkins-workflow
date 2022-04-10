@@ -27,6 +27,11 @@ You should now be able to access jenkins at: http://<ip-address>:8080
 ```
 _The initial admin password can be found in `/var/jenkins_home/secrets/initialAdminPassword`_
 
+The jenkins pipelines are located in the following directory in the host machine: 
+```
+/var/jenkins_home/workspace/
+```
+
 #### Install Docker on the host machine
 Run the following docker image as a container in the DigitalOcean machine, 
 to get access to the Docker client, and to expose the Docker socket, so we can access 
@@ -77,12 +82,20 @@ Create a container that includes the Node.js binaries and the app.
 This ensures that the code will **behave in the same way** on the production
 system as in the non-production environments.
 
+
+### Jenkins Job DSL vs. Jenkins Pipeline
+* They both have the capability to write all CI/CD in code. 
+* The difference is in implementation in Jenkins. 
+* Jenkins Job DSL create **new jobs** based on the code. 
+* The jenkins pipelines are a **job type**, which are used to handle the 
+build/test/deployment of a project. 
+
 ### Jenkins Plugins 
 
 * Nodejs
 * CloudBees Docker Build and Publish
-* Jenkins Job DSL
-
+* Jenkins Job DSL (needed for groovy scripts)
+* Docker Pipeline (needed for jenkins pipelines)
 
 ### Jenkins Job DSL
 [API documentation](https://jenkinsci.github.io/job-dsl-plugin/)
