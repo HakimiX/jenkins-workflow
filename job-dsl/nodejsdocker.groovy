@@ -1,5 +1,10 @@
 
 job('NodeJS Docker example') {
+    node {
+        env.NODEJS_HOME = "${tool 'Node 4.x'}"
+        // on linux / mac
+        env.PATH="${env.NODEJS_HOME}/bin:${env.PATH}"
+    }
     scm {
         git('https://github.com/HakimiX/docker-app') {  node -> // is hudson.plugins.git.GitSCM
             node / gitConfigName('DSL User')
